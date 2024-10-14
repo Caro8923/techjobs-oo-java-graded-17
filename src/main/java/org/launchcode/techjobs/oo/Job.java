@@ -4,6 +4,7 @@ import java.util.Objects;
 
 public class Job {
 
+    private String getId;
     private int id;
     private static int nextId = 1;
 
@@ -95,5 +96,60 @@ public class Job {
 
     public int getId() {
         return id;
+    }
+
+    @Override
+    public String toString() {
+        String line = System.lineSeparator();
+        String line1;
+        String line2;
+        String line3;
+        String line4;
+        String line5;
+
+        if (name != null) {
+            line1 = "Name: " + name + line;
+        } else {
+            line1 =  "Name: Data not available" + line;
+        }
+        if (employer != null) {
+            line2 = "Employer: " + employer + line;
+        } else {
+            line2 = "Employer: Data not available" + line;
+        }
+
+        if (location != null) {
+            line3 = "Location: " + location + line;
+        } else {
+            line3 = "Location: Data not available" + line;
+        }
+
+        if (positionType != null) {
+            line4 = "Position Type: " + positionType+ line;
+        } else {
+            line4 = "Position Type: Data not available" + line;
+        }
+
+        if (coreCompetency != null) {
+            line5 = "Core Competency: " + coreCompetency;
+        } else {
+            line5 = "Core Competency: Data not available";
+        }
+
+        return line +
+                "ID: " + id + line +
+                line1 +
+                line2 +
+                line3 +
+                line4 +
+                line5 + line;
+
+//        return line +
+//                "ID: " + id + line +
+//                "Name: " + name + line +
+//                "Employer: " + employer + line +
+//                "Location: " + location+ line +
+//                "Position Type: " + positionType+ line +
+//                "Core Competency: " + coreCompetency + line;
     }
 }
