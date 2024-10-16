@@ -18,7 +18,7 @@ public class JobTest {
 
     //Test full constructor
     @Test
-    public void JobConstructorSetsAllFields() {
+    public void testJobConstructorSetsAllFields() {
         Job job = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         assertEquals("Product tester", job.getName());
         assertTrue("Sets Employer type parameter", job.getEmployer() instanceof Employer);
