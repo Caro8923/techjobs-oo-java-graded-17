@@ -4,7 +4,6 @@ import java.util.Objects;
 
 public class Job {
 
-    private String getId;
     private int id;
     private static int nextId = 1;
 
@@ -107,30 +106,59 @@ public class Job {
         String line4;
         String line5;
 
+//        if (name != null) {
+//            line1 = "Name: " + name + line;
+//        } else {
+//            line1 =  "Name: Data not available" + line;
+//        }
+//        if (employer.getValue() != null) {
+//            line2 = "Employer: " + employer + line;
+//        } else {
+//            line2 = "Employer: Data not available" + line;
+//        }
+//
+//        if (location != null) {
+//            line3 = "Location: " + location + line;
+//        } else {
+//            line3 = "Location: Data not available" + line;
+//        }
+//
+//        if (positionType != null) {
+//            line4 = "Position Type: " + positionType+ line;
+//        } else {
+//            line4 = "Position Type: Data not available" + line;
+//        }
+//
+//        if (coreCompetency != null) {
+//            line5 = "Core Competency: " + coreCompetency;
+//        } else {
+//            line5 = "Core Competency: Data not available";
+//        }
+
         if (name != null) {
             line1 = "Name: " + name + line;
         } else {
             line1 =  "Name: Data not available" + line;
         }
-        if (employer != null) {
+        if ((employer != null) && (!employer.getValue().isEmpty())) {
             line2 = "Employer: " + employer + line;
         } else {
             line2 = "Employer: Data not available" + line;
         }
 
-        if (location != null) {
+        if ((location != null) && (!location.getValue().isEmpty())) {
             line3 = "Location: " + location + line;
         } else {
             line3 = "Location: Data not available" + line;
         }
 
-        if (positionType != null) {
+        if ((positionType != null) && (!positionType.getValue().isEmpty())) {
             line4 = "Position Type: " + positionType+ line;
         } else {
             line4 = "Position Type: Data not available" + line;
         }
 
-        if (coreCompetency != null) {
+        if ((coreCompetency != null) && (!coreCompetency.getValue().isEmpty())) {
             line5 = "Core Competency: " + coreCompetency;
         } else {
             line5 = "Core Competency: Data not available";

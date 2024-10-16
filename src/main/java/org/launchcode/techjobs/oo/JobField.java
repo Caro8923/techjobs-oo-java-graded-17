@@ -27,19 +27,17 @@ public abstract class JobField {
     }
 
     @Override
-    public boolean equals(Object o) {  // Two objects are equal if they have the same id.
+    public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Employer)) return false;
-        Employer employer = (Employer) o;
-        return getId() == employer.getId();
+        if (!(o instanceof JobField jobField)) return false;
+        return id == jobField.id;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId());
+        return Objects.hashCode(id);
     }
-
-    // Getters and Setters:
+// Getters and Setters:
 
     public int getId() {
         return id;
